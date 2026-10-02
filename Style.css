@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap');
+
+:root{
+  --bg:#071018;
+  --panel:#0d1924;
+  --text:#f5f8fa;
+  --muted:#9eacb8;
+  --line:#20303d;
+  --green:#8cf2c5;
+  --blue:#69b8ff
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+  margin:0;
+  background:radial-gradient(circle at 80% 5%,#123b3d,transparent 30%),var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.6
+}
+
+.nav{
+  height:76px;
+  padding:0 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:5;
+  background:#071018dd;
+  backdrop-filter:blur(16px)
+}
+
+a{
+  color:inherit;
+  text-decoration:none
+}
+
+.brand{
+  font:700 19px "Space Grotesk";
+  display:flex;
+  gap:10px;
+  align-items:center
+}
+
+.brand b{
+  display:grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  border-radius:10px;
+  background:var(--green);
+  color:#071018
+}
+
+.nav nav{
+  display:flex;
+  gap:30px;
+  color:var(--muted);
+  font-size:14px
+}
+
+.navbtn,.secondary{
+  border:1px solid #35505f;
+  border-radius:999px;
+  padding:9px 16px;
+  font-size:13px
+}
+
+.hero{
+  max-width:1180px;
+  margin:auto;
+  padding:100px 28px;
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:70px;
+  align-items:center
+}
+
+.hero small,.section>small,.band small{
+  color:var(--green);
+  letter-spacing:2px;
+  font-weight:700;
+  font-size:11px
+}
+
+.hero h1{
+  font:700 clamp(48px,7vw,82px)/1.05 "Space Grotesk";
+  letter-spacing:-3px;
+  margin:18px 0
+}
+
+.hero h1 i{
+  color:var(--green);
+  font-style:normal
+}
+
+.hero>div>p{
+  max-width:650px;
+  color:var(--muted);
+  font-size:18px
+}
+
+.actions{
+  display:flex;
+  gap:14px;
+  margin:30px 0 40px;
+  flex-wrap:wrap
+}
+
+.primary{
+  background:var(--green);
+  color:#071018;
+  border-radius:10px;
+  padding:13px 18px;
+  font-weight:700;
+  font-size:14px
+}
+
+.stats{
+  display:flex;
+  gap:28px;
+  color:var(--muted);
+  font-size:11px
+}
+
+.stats span{display:grid}
+
+.stats strong{
+  color:#fff;
+  font-size:13px
+}
+
+aside{
+  background:linear-gradient(145deg,#122432,#0b151f);
+  border:1px solid #294050;
+  border-radius:26px;
+  padding:34px;
+  min-height:390px;
+  box-shadow:0 25px 80px #0006
+}
+
+aside label{
+  float:right;
+  color:var(--green);
+  font-size:9px;
+  letter-spacing:1px
+}
+
+.orb{
+  margin:70px 0 25px;
+  width:74px;
+  height:74px;
+  border-radius:22px;
+  display:grid;
+  place-items:center;
+  background:linear-gradient(135deg,var(--green),var(--blue));
+  color:#071018;
+  font:700 35px "Space Grotesk"
+}
+
+aside h2{
+  font:700 28px "Space Grotesk"
+}
+
+aside p,.grid p,.band p,.about p{
+  color:var(--muted);
+  font-size:14px
+}
+
+aside a,.grid a{
+  color:var(--green);
+  font-size:13px;
+  font-weight:700
+}
+
+.section{
+  max-width:1180px;
+  margin:auto;
+  padding:90px 28px
+}
+
+.section h2,.about h2{
+  font:700 clamp(34px,5vw,54px)/1.1 "Space Grotesk";
+  margin:12px 0 35px
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px
+}
+
+.grid article{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+  min-height:230px
+}
+
+.grid em{
+  font-style:normal;
+  color:var(--green);
+  font-size:9px;
+  letter-spacing:1.5px
+}
+
+.grid h3{
+  font:700 25px "Space Grotesk";
+  margin:30px 0 8px
+}
+
+.band{
+  max-width:1180px;
+  margin:20px auto 60px;
+  padding:45px 50px;
+  border:1px solid #315060;
+  border-radius:22px;
+  background:#10232c;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:30px
+}
+
+.band h2{
+  font:700 34px/1.1 "Space Grotesk";
+  margin:10px 0
+}
+
+.about p{
+  max-width:700px;
+  font-size:17px
+}
+
+footer{
+  max-width:1180px;
+  margin:auto;
+  border-top:1px solid var(--line);
+  padding:25px 28px;
+  color:#70818d;
+  font-size:11px;
+  display:flex;
+  justify-content:space-between
+}
+
+@media(max-width:800px){
+  .nav nav{display:none}
+  .navbtn{display:none}
+
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:60px
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+
+  .band{
+    display:block;
+    margin:20px 28px 60px
+  }
+
+  .band .primary{
+    display:inline-block;
+    margin-top:20px
+  }
+
+  .stats{
+    flex-wrap:wrap
+  }
+
+  .hero h1{
+    letter-spacing:-2px
+  }
+
+  footer{
+    display:block
+  }
+
+  footer span{
+    display:block;
+    margin-top:8px
+  }
+}
